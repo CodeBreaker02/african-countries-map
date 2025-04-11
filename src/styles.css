@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --land: #6e7f80;  /* Changed to a gray-blue color */
+    --background: #f0f0f0;  /* Lighter gray background */
+    --border-color: #555;  /* Dark gray for borders */
+    --text-color: #333;  /* Dark gray for text */
+    --highlight-color: #333;  /* Color for selected country */
+}
+
+html, body {
+    text-align: center;
+    min-width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    position: relative;
+    display: inline-block;
+    color: var(--text-color);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-gap: 10px;
+    position: relative;
+    max-width: 70%;
+    margin: auto;
+}
+
+.land, .st0, .circle {
+    fill: var(--land);
+    fill-opacity: 1;
+    stroke: var(--background);
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+    stroke-miterlimit: 3.97446823;
+    stroke-dasharray: none;
+    transition: fill 0.3s ease-in-out;  /* Smooth transition for color changes */
+}
+
+/* Hover effect for countries */
+.land:hover {
+    cursor: pointer;
+    fill: #555;  /* Darker on hover */
+}
+
+.flag {
+    padding-top: 0;
+    font-size: 14vw;
+    line-height: 0.8em;
+}
+
+.map, #flag, #capital, #currency {
+    display: inline-grid;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px var(--border-color);
+    animation: fade-in 1.5s ease-in-out forwards;  /* Smoother, faster animation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    background-color: white;
+    border-radius: 5px;  /* Rounded corners */
+}
+
+.map p, #flag p, #capital p, #currency p,
+.map img, #flag img, #capital img, #currency img {
+    animation: fade-in 1s ease-in-out forwards;  /* Smoother, faster animation */
+}
+
+.map p, #flag p, #capital p, #currency p {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.map {
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#flag {
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#capital {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 10px;
+}
+
+#currency {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 10px;
+}
+
+span {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--text-color);
+    transition: color 0.3s ease;  /* Smooth transition for text color */
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);  /* Slight movement for smoother appearance */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body, html {
+        max-width: 90%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: inline-block;
+        max-width: 90%;
+    }
+
+    .map {
+        display: inline-block;
+        margin: auto;
+        width: 90%;
+        padding: 10px;
+        border: none;
+    }
+
+    #flag, #capital, #currency {
+        display: inline-block;
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+    }
+
+    #currency, #flag {
+        border-top: none;
+    }
+}
