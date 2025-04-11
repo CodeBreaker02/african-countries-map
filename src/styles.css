@@ -36,12 +36,14 @@ html, body {
     stroke-miterlimit: 3.97446823;
     stroke-dasharray: none;
     transition: fill 0.3s ease-in-out;  /* Smooth transition for color changes */
+    z-index: 10; /* Ensure the elements are on top for hover detection */
 }
 
 /* Hover effect for countries */
-.land:hover {
+svg .land:hover, svg path.land:hover, g .land:hover {
     cursor: pointer;
-    fill: #555;  /* Darker on hover */
+    fill: #2d0448 !important;  /* Dark purple on hover with !important */
+    transition: fill 0.3s ease-in-out;
 }
 
 .flag {

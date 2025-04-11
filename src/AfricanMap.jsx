@@ -24,7 +24,6 @@ const AfricanMap = () => {
 
         // Set the selected country color to highlight color
         document.getElementById(countryID).style.fill = "var(--highlight-color)";
-        console.log(countryID);
 
         // Get and set the country data
         const country = africanCountriesData[countryID.toUpperCase()] || africanCountriesData[countryID];
@@ -33,6 +32,7 @@ const AfricanMap = () => {
             setSelectedCountry(country);
         }
     };
+
     return (
         <>
             <h1 id="name">{selectedCountry ? selectedCountry["Country Name"] : "Click a country to learn more"}</h1>
