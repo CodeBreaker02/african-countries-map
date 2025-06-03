@@ -235,7 +235,7 @@ export const africanCountriesData = {
         "Country Flag": "🇷🇼"
     },
     "ST": {
-        "Country Name": "Sao Tome And Principe",
+        "Country Name": "Sao Tome and Principe",
         "Capital": "São Tomé",
         "Currency": "Sao Tome and Principe dobra",
         "Country Flag": "🇸🇹"
