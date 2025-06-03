@@ -20,10 +20,11 @@ const AfricanMap = () => {
         });
 
         // Get the country ID
-        const countryID = e.target.id;
+        const rawID = e.target.id;
+        const countryID = rawID.replace(/-$/, '');
 
         // Set the selected country color to highlight color
-        document.getElementById(countryID).style.fill = "var(--highlight-color)";
+        document.getElementById(rawID).style.fill = "var(--highlight-color)";
 
         // Get and set the country data
         const country = africanCountriesData[countryID.toUpperCase()] || africanCountriesData[countryID];
