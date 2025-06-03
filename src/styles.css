@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --land: #6e7f80;  /* Changed to a gray-blue color */
-    --background: #f0f0f0;  /* Lighter gray background */
-    --border-color: #555;  /* Dark gray for borders */
-    --text-color: #333;  /* Dark gray for text */
-    --highlight-color: #333;  /* Color for selected country */
+    /* Warm earthy palette for an African theme */
+    --land: #a2642b;            /* Earthy brown for land */
+    --background: #fff8e1;      /* Soft warm background */
+    --border-color: #3e2723;    /* Dark brown borders */
+    --text-color: #3e2723;      /* Dark brown text */
+    --highlight-color: #388e3c; /* Green highlight for selected country */
 }
 
 html, body {
