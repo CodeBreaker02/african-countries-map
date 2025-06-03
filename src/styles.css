@@ -57,7 +57,7 @@ svg .land:hover, svg path.land:hover, g .land:hover {
     padding: 10px;
     margin: 10px;
     border: solid 2px var(--border-color);
-    animation: fade-in 1.5s ease-in-out forwards;  /* Smoother, faster animation */
+    animation: fade-in 1.5s ease-in-out forwards;  /* Smooth 1.5s fade-in animation */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
     background-color: white;
     border-radius: 5px;  /* Rounded corners */
